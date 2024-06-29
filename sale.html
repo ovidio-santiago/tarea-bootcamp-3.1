@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/sale.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section class="section_inner">
+      <div class="section_title">
+        <h1>ventas de granos de cafe</h1>
+      </div>
+    </section>
+
+    <section class="section_inner menu_section">
+      <div class="center">
+        <h1 class="menu_title">póngase en fila</h1>
+      </div>
+      <ul class="menu_list coffee_menu">
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">mezcla original 200g</h2>
+            <p class="caffee_menu_price">500円</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">mezcla original 500g</h2>
+            <p class="caffee_menu_price">900円</p>
+          </div>
+          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">mezcla especial 200g</h2>
+            <p class="caffee_menu_price">700円</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+        </li>
+        <li class="caffee_menu_list_item">
+          <div class="caffee_menu_content">
+            <h2 class="menu_item_title">mezcla especial 500g</h2>
+            <p class="caffee_menu_price">1200円</p>
+          </div>
+          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+        </li>
+      </ul>
+      <h2>Información de envío</h2>
+      <ul>
+        <li>・Si la compra no supera los 2000円, el envio saldra 500円 </li>
+        <li>・Si la compra supera los 2000円, el envio saldra 250円</li>
+        <li>・Envio Gratis por más de 3000円 </li>
+      </ul>
+    </section>
+
+    <section class="section_inner">
+      <h2>Orden</h2>
+      <form>
+        <p>Por favor seleccione un producto</p>
+        <div>
+          <select id="product" required>
+            <option hidden value="0">por favor seleccione</option>
+            <option value="1" name="Mezcla Original 200g">Mezcla Original 200g </option>
+            <option value="2" name="Mezcla Original 500g">Mezcla Original 500g </option>
+            <option value="3" name="Mezcla Especial 200g">Mezcla Especial 200g </option>
+            <option value="4" name="Mezcla Especial 500g">Mezcla Especial 500g </option>
+          </select>
+          <p>Por favor seleccione cantidad</p>
+          <input type="number" min="1" max="5" id="number" required>
+        </div>
+        <br>
+        <input type="button" class="btn" value="Añadir al carrito" onclick="add()">
+        <input type="button" class="btn" value="cantidad total" onclick="calc()">
+      </form>
+    </section>
+    <script type="text/javascript" src="javascripts/sale.js"></script>
+  </body>
+</html>
